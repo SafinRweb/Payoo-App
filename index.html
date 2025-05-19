@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Payoo Login</title>
+</head>
+<body>
+    <main class="flex justify-center">
+        <div class="mockup-phone">
+        <div class="mockup-phone-camera"></div>
+        <div class="mockup-phone-display">
+        <!-- Login Section -->
+         <div class="hero bg-base-300 min-h-screen">
+         <div class="hero-content flex-col lg:flex-row-reverse">
+         <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <div class="card-body">
+            <fieldset class="fieldset">
+            <label class="label">Phone Number </label>
+            <input id="phn-number" type="number" class="input" placeholder="Your phone number" required/>
+            <label class="label">Pin</label>
+            <input id="pin-number" type="password" class="input" placeholder="Your pin" required />
+            <div><a class="link link-hover">Forgot password?</a></div>
+            <button id="btn-login" class="btn btn-neutral mt-4">Login</button>
+            </fieldset>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </main>
+    <script src="src/login.js"></script>
+</body>
+</html>
