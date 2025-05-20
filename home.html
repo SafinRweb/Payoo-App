@@ -22,12 +22,12 @@
         <div class="divider"></div>
         <!-- User action buttons -->
          <div>
-            <button class="btn btn-lg">Add Money</button>
-            <button class="btn btn-lg">Cash Out</button>
+            <button id="btn-show-add-money" class="btn btn-lg">Add Money</button>
+            <button id="btn-show-cash-out" class="btn btn-lg">Cash Out</button>
          </div>
          <div class="divider"></div>
          <!-- Add money form -->
-          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <div id="add-money-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
              <div class="card-body">
             <fieldset class="fieldset">
                 <label class="label">Amount</label>
@@ -37,10 +37,24 @@
                 <button id="btn-add-money" class="btn btn-neutral mt-4">Add money</button>
             </fieldset>
       </div>
+        </div>
+        <!-- Cash out form -->
+         <div id="cash-out-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+             <div class="card-body">
+            <fieldset class="fieldset">
+                <label class="label">Amount</label>
+                    <input id="input-cash-out" type="number" class="input" placeholder="Enter Amount" required/>
+                <label class="label">Pin</label>
+                    <input id="input-cash-out-pin" type="password" class="input" placeholder="Enter Password" required/>
+                <button id="btn-cash-out" class="btn btn-neutral mt-4">Cash out</button>
+            </fieldset>
+      </div>
+        </div>
     </div>
     </div>
-    </div>
-    <script src="src/home.js"></script>
+    <script src="src/addMoney.js"></script>
+    <script src="src/cashOut.js"></script>
+    <script src="src/features.js"></script>
 </main>
 </body>
 </html>
