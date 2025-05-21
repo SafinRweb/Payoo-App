@@ -21,13 +21,14 @@
         </div>
         <div class="divider"></div>
         <!-- User action buttons -->
-         <div>
+         <div class="flex justify-between">
             <button id="btn-show-add-money" class="btn btn-lg">Add Money</button>
             <button id="btn-show-cash-out" class="btn btn-lg">Cash Out</button>
-         </div>
+            <button id="btn-show-transaction" class="btn btn-lg">Transactions</button>
+        </div>
          <div class="divider"></div>
          <!-- Add money form -->
-        <div id="add-money-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <div id="add-money-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
              <div class="card-body">
             <fieldset class="fieldset">
                 <label class="label">Amount</label>
@@ -50,11 +51,21 @@
             </fieldset>
       </div>
         </div>
+        <!-- Transaction history -->
+         <div>
+            <div id="transaction-history" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <div class="card-body">
+                    <h2 class="card-title">Transaction History</h2>
+                    <div id="transaction-container" class="space-y-3">
+
+                    </div>
+         </div>
     </div>
     </div>
     <script src="src/addMoney.js"></script>
     <script src="src/cashOut.js"></script>
     <script src="src/features.js"></script>
+    <script src="src/utilities.js"></script>
 </main>
 </body>
 </html>

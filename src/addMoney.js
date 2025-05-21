@@ -2,25 +2,30 @@
 document.getElementById('btn-add-money').addEventListener('click', function(event){
     event.preventDefault();
 
-    const inputAddMoney = document.getElementById('input-add-money').value;
-    const inputPin = document.getElementById('input-pin').value;
-    console.log(inputAddMoney, inputPin);
+    const addMoney = getInputFieldValueById('input-add-money');
+    const inputPin = getInputFieldValueById('input-pin');
+    console.log(addMoney, inputPin);
 
     // verify pin (Temporary)
-    if(inputPin === '1234'){
-        console.log('Adding Money to your Acccount')
+    if(inputPin === 1234){
+        console.log('Adding Money to your Account')
 
-        const balance = document.getElementById('acc-balance').innerText;
-
-        const addMoneyNumber = parseFloat(inputAddMoney);
-        const balanceNumber = parseFloat(balance);
-
-        const newBalance = addMoneyNumber + balanceNumber;
+        const balance = getTextFieldValueById('acc-balance');
+        const newBalance = balance + addMoney;
         console.log(newBalance);
 
         document.getElementById('acc-balance').innerText = newBalance;
     
+        // add to transaction history
+        const div = document.createElement('div');
+        div.classList.add('bg-gray-200');
+        div.innerHTML= `
+        <h4 class="text-xl font-bold">Cash In</h4>
+        <p class="text-lg">Added ${addMoney} to your account</p>`
+
+        document.getElementById('transaction-container').appendChild(div);
+
     }else{
-        alert('Failed to add money! Please check you pin.')
+        alert('Failed to add money! Please write pin 1234.')
     }
 })
